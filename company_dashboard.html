@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Dashboard</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>Company Portal</h1>
+            </div>
+            <nav class="main-nav">
+                <span id="companyName" class="welcome-message"></span>
+                <button id="logoutButton" class="btn btn-secondary">Logout</button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="dashboard-main">
+        <div class="container">
+            <div class="dashboard-grid">
+                <!-- Add/Edit Medicine Form -->
+                <div class="dashboard-card">
+                    <h3 id="form-title">Add New Medicine</h3>
+                     <div id="message-container"></div>
+                    <form id="medicineForm">
+                        <input type="hidden" id="medicineId" name="medicineId">
+                        <div class="form-group">
+                            <label for="medicine_name">Medicine Name</label>
+                            <input type="text" id="medicine_name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="ingredients">Ingredients</label>
+                            <textarea id="ingredients" rows="4" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="use_case">Use Case</label>
+                            <textarea id="use_case" rows="3" required></textarea>
+                        </div>
+                        <div class="form-buttons">
+                           <button type="submit" class="btn btn-primary">Save Medicine</button>
+                           <button type="button" id="clearFormBtn" class="btn btn-tertiary">Clear</button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- My Medicines List -->
+                <div class="dashboard-card span-2">
+                    <h3>My Uploaded Medicines</h3>
+                    <div class="table-container">
+                        <table id="myMedicinesTable">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Ingredients</th>
+                                    <th>Use Case</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Data will be loaded here -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                 <!-- Browse All Medicines -->
+                <div class="dashboard-card span-3">
+                    <h3>Browse All Approved Medicines</h3>
+                     <div class="table-container">
+                        <table id="allMedicinesTable">
+                            <thead>
+                                <tr>
+                                    <th>Medicine Name</th>
+                                    <th>Company</th>
+                                    <th>License</th>
+                                    <th>Ingredients</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Data will be loaded here -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <script src="assets/js/company.js"></script>
+</body>
+</html>

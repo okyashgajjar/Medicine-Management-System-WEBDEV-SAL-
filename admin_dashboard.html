@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>Administrator Portal</h1>
+            </div>
+            <nav class="main-nav">
+                 <button id="logoutButton" class="btn btn-secondary">Logout</button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="dashboard-main">
+        <div class="container">
+            <!-- Stats Cards -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h4>Total Companies</h4>
+                    <p id="totalCompanies">0</p>
+                </div>
+                 <div class="stat-card">
+                    <h4>Pending Approvals</h4>
+                    <p id="pendingCompanies">0</p>
+                </div>
+                 <div class="stat-card">
+                    <h4>Banned Licenses</h4>
+                    <p id="bannedCompanies">0</p>
+                </div>
+                 <div class="stat-card">
+                    <h4>Total Medicines</h4>
+                    <p id="totalMedicines">0</p>
+                </div>
+            </div>
+
+            <!-- Manage Companies Table -->
+            <div class="dashboard-card manage-section">
+                <h3>Manage Companies</h3>
+                <div id="admin-message-container"></div>
+                <div class="table-container">
+                    <table id="companiesTable">
+                        <thead>
+                            <tr>
+                                <th>Company Name</th>
+                                <th>License Number</th>
+                                <th>Email</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Company data will be loaded here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal for viewing/deleting company medicines -->
+    <div id="medicinesModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h3 id="modalCompanyName">Company Medicines</h3>
+            <div class="table-container">
+                <table id="modalMedicinesTable">
+                    <thead>
+                        <tr>
+                            <th>Medicine Name</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="assets/js/admin.js"></script>
+</body>
+</html>

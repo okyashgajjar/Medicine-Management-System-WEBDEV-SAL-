@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transparent Medicine Verification Platform</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>Transparent Medicine Verification</h1>
+            </div>
+            <nav class="main-nav">
+                <a href="login.html" class="btn btn-secondary">Login / Register</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="container">
+                <h2>Verify Your Medicine with Confidence</h2>
+                <p>Search our public database of licensed medicines in India to fight against fakes.</p>
+                <div class="search-container">
+                    <input type="text" id="searchInput" placeholder="Search by medicine name, company, or use case...">
+                    <button id="searchButton" class="btn btn-primary">Search</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="results-section">
+            <div class="container">
+                <h3>Search Results</h3>
+                <div id="resultsContainer" class="results-grid">
+                    <!-- Search results will be dynamically inserted here -->
+                    <p class="placeholder-text">Enter a search term above to see results.</p>
+                </div>
+                 <div id="loader" class="loader" style="display: none;"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Transparent Medicine Verification Platform. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/public.js"></script>
+</body>
+</html>
