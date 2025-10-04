@@ -23,6 +23,7 @@ A web-based platform to **verify licensed pharmaceutical medicines** in India. C
 - **Libraries/Fonts:** Google Fonts (Inter), Vanilla JS  
 
 ---
+## Project Structure 
 
 project-root/
 │
@@ -90,8 +91,9 @@ CREATE TABLE medicines (
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   FOREIGN KEY (company_id) REFERENCES companies(id) ON DELETE CASCADE
 );
+```
 
-How to Run (Windows)
+## How to Run (Windows)
 
 Install XAMPP: https://www.apachefriends.org/download.html
 
@@ -110,7 +112,7 @@ Password: SecurePass!2024
 Company registration and login is available via Register and Login pages
 
 
-How to Run (Linux)
+### How to Run (Linux)
 
 Install XAMPP for Linux: https://www.apachefriends.org/download.html
 
@@ -135,8 +137,8 @@ Username: superadmin
 
 Password: SecurePass!2024
 
-Using the Platform
-Admin
+### Using the Platform
+# Admin
 
 View dashboard stats (total companies, pending approvals, banned licenses, total medicines)
 
@@ -144,7 +146,7 @@ Approve or ban company registrations
 
 View and delete medicines uploaded by companies
 
-Company
+# Company
 
 Register company account (pending admin approval)
 
@@ -154,16 +156,13 @@ Edit or delete your medicines
 
 Browse all approved medicines
 
-Public
+# Public
 
 Search medicines by name, company, or use case
 
 Verify licensed medicines
 
 
-License
+# License
 
 MIT License (Free to use and modify)
-
-## Project Structure
-
